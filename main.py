@@ -38,3 +38,5 @@ def get_tweets_ikea(data, context):
         bq_load('ikea_table_data', df)
     except:
         raise Exception('Error in function get_tweets_ikea.')
+        
+ get_tweets_ikea(data, context)
