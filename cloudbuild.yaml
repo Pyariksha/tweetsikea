@@ -5,4 +5,4 @@ steps:
   # (pip packages won't be preserved in future steps!)
   args: [-c, 'pip install -r requirements.txt']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'get_tweets_ikea', '--trigger-topic MY_TOPIC', '--runtime', 'python39', '--entry-point', 'get_tweets_ikea']
+  args: ['functions', 'deploy', 'get_tweets_ikea', '--trigger-topic', '--runtime', 'python39', '--entry-point', 'get_tweets_ikea']
