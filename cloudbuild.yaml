@@ -3,6 +3,6 @@ steps:
   entrypoint: /bin/sh
   # Run pip install and pytest in the same build step
   # (pip packages won't be preserved in future steps!)
-  args: [-c, 'pip install -r requirements.txt && pytest']
+  args: [-c, 'pip install -r requirements.txt']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['functions', 'deploy', 'get_tweets_ikea', '--trigger-topic ikea', '--runtime', 'python39', '--entry-point', 'get_tweets_ikea']
