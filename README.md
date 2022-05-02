@@ -12,7 +12,7 @@
   -BigQuery scheduled query to deduplicate table data<br>
   -Docker containers for builds in cloud build - artifact repository stores images<br>
   -Unit testing using pytest<br>
-  </p><br>
+  </p>
   <h3>What more can be done:</h3>
   -Streaming pipeline<br>
   -Delta tables for versions/history<br>
