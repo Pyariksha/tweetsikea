@@ -8,6 +8,8 @@
   -CI/CD with cloudbuild.yaml<br>
   -Pub Sub for event triggers<br>
   -Cloud scheduler for automating function runs to get ikea tweets data<br>
+  -BigQuery table to store appended tweets per batch<br>
+  -BigQuery scheduled query to deduplicate table data<br>
   -Docker containers for builds in cloud build - artifact repository stores images<br>
   -Unit testing using pytest<br>
   </p><br>
