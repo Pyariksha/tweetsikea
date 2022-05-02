@@ -40,4 +40,4 @@ def get_tweets_ikea():
     except:
         raise Exception('Error in function get_tweets_ikea.') #exception handling to seperate config/run failures from function code errors
         
- get_tweets_ikea() #calls the function as every time gcp runs the function the bq table must update with appended tweets
+ get_tweets_ikea() #calls the function as every time gcp runs the function the bq table must update with appended tweets.
