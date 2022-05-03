@@ -8,8 +8,8 @@ steps:
 # [END cloudbuild install and build]
 # [START cloudbuild push]
 # Docker push to Google Artifact Registry
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/sigma-scheduler-348710/$COMMIT_SHA']
+#- name: 'gcr.io/cloud-builders/docker'
+#  args: ['push', 'gcr.io/sigma-scheduler-348710/$COMMIT_SHA']
 # [END cloudbuild push]
 # [START cloudbuild deploy]
 - name: 'gcr.io/cloud-builders/gcloud'
