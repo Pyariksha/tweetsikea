@@ -1,6 +1,6 @@
 # tweetsikea<br>
 <h2>This repo contains the files used to create a GCP pipeline to get ikea tweets and store in BQ table for end user data scientists to use.</h2><br>
-This repo contains the following:<br>
+<h3>This repo contains the following:</h3><br>
 1. main.py -- contains python script<br>
 2. requirements.txt -- contains import requirements<br>
 3. main_test.py -- contains pytest unit test run in CI<br>
@@ -9,11 +9,12 @@ This repo contains the following:<br>
 7. Presentations (keynote file and pdf version) - contains flow and basic output snips<br>
 8. Extra file containing bq sql DDL query - EL(T)<br>
 9. Draft extra flow diagram for proposed stream<br>
-Contents:<br>
+<h3>Contents:</h3><br>
 1. The flow of the batch process pipeline<br>
 2. The SE principles, languages and cloud tools this project uses<br>
 3. Sample output in bq<br>
 4. What more can be done<br>
+5. Extra draft stream flow<br>
 <h2>1. The flow of the batch process pipeline</h2>
 <img width="996" alt="image" src="https://user-images.githubusercontent.com/50378431/166420420-42d6a971-c321-4251-9496-3b98706a208b.png"><br>
 <p><h2>2. The SE principles, languages and cloud tools this project uses</h2>
@@ -29,9 +30,10 @@ Contents:<br>
   <img width="1036" alt="image" src="https://user-images.githubusercontent.com/50378431/166442423-ff39d457-3b7c-4d5f-b563-e4ee0208e5a5.png"><br>
   </p>
   <h2>3. Sample output in bq</h2>
-  <img width="1338" alt="image" src="https://user-images.githubusercontent.com/50378431/166423045-61798236-9c0e-429c-808f-0a70edd143eb.png"
-  <h2>4. What more can be done</h2><br>
+  <img width="1338" alt="image" src="https://user-images.githubusercontent.com/50378431/166423045-61798236-9c0e-429c-808f-0a70edd143eb.png"<br>
+  <h2>4. What more can be done</h2>
   -Streaming pipeline<br>
   -Delta tables for versions/history<br>
   -Airflow for pipeline automation<br>
-  -More complex data model using twitter data for deeper insights
+  -More complex data model using twitter data for deeper insights<br>
+  <h2>5. Extra draft stream flow</h2>
