@@ -20,16 +20,16 @@
 <p><h2>2. The SE principles, languages and cloud tools this project uses</h2>
   SE principles:<br>
   -Version control with GitHub<br>
+  -CI/CD with cloudbuild.yaml<br>
   -Unit testing using pytest: see below unit test run successful in cloud build<br>
   <img width="1036" alt="image" src="https://user-images.githubusercontent.com/50378431/166442423-ff39d457-3b7c-4d5f-b563-e4ee0208e5a5.png"><br>
-  -CI/CD with cloudbuild.yaml<br>
   Google cloud resources:<br>
   -Cloud build
   -Pub Sub for event triggers<br>
   -Cloud scheduler for automating function runs to get ikea tweets data<br>
   -BigQuery table to store appended tweets per batch<br>
-  -Docker containers - artifact repository images (Not included in cloudbuild but script is created)<br>
-  Languages/scripts:
+  -Docker containers - artifact repository images (Not included in cloudbuild but script is created)<br><br>
+  Languages/scripts:<br>
   -Python functions using tweepy library to get ikea tweets and write to big query table<br>
   -BigQuery scheduled query to deduplicate table data<br>
   </p>
