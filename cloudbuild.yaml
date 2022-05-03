@@ -1,8 +1,28 @@
 steps:
+# [START install dependencies and build]
 - name: 'docker.io/library/python:3.9'
   entrypoint: /bin/sh
   # Run pip install and pytest in the same build step
   # (pip packages won't be preserved in future steps!)
   args: [-c, 'pip install -r requirements.txt']
+# [END cloudbuild install and build]
+# [START cloudbuild pytest]
+# Run unit tests
+- name: python
+  entrypoint: python
+  args: ["-m", "pytest", "--junitxml=${SHORT_SHA}_test_log.xml"] 
+# [END cloudbuild pytest]
+# [START cloudbuild push]
+# Docker push to Google Artifact Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/sigma-scheduler-348710/$COMMIT_SHA']
+# [END cloudbuild push]
+# [START cloudbuild deploy]
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['functions', 'deploy', 'get_tweets_ikea', '--trigger-topic', 'ikea', '--runtime', 'python39', '--entry-point', 'get_tweets_ikea']
+# [END cloudbuild deploy]
+# Store images in Google Artifact Registry 
+images:
+- 'gcr.io/sigma-scheduler-348710/latest'
+- 'gcr.io/sigma-scheduler-348710/$COMMIT_SHA'
+# [END cloudbuild_python_yaml]
