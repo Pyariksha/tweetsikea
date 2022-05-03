@@ -21,7 +21,8 @@ Contents:<br>
   -BigQuery table to store appended tweets per batch<br>
   -BigQuery scheduled query to deduplicate table data<br>
   -Docker containers for builds in cloud build - artifact repository stores images<br>
-  -Unit testing using pytest<br>
+  -Unit testing using pytest: see below unit test run successful in cloud build<br>
+  <img width="1036" alt="image" src="https://user-images.githubusercontent.com/50378431/166442423-ff39d457-3b7c-4d5f-b563-e4ee0208e5a5.png"><br>
   </p>
   <h3>Sample output in bq:</h3>
   <img width="1338" alt="image" src="https://user-images.githubusercontent.com/50378431/166423045-61798236-9c0e-429c-808f-0a70edd143eb.png"
