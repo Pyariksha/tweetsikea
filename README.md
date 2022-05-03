@@ -18,21 +18,26 @@
 <h2>1. The flow of the batch process pipeline</h2>
 <img width="996" alt="image" src="https://user-images.githubusercontent.com/50378431/166420420-42d6a971-c321-4251-9496-3b98706a208b.png"><br>
 <p><h2>2. The SE principles, languages and cloud tools this project uses</h2>
-  -Python functions using tweepy library to get ikea tweets and write to big query table<br>
+  SE principles:<br>
   -Version control with GitHub<br>
+  -Unit testing using pytest: see below unit test run successful in cloud build<br>
+  <img width="1036" alt="image" src="https://user-images.githubusercontent.com/50378431/166442423-ff39d457-3b7c-4d5f-b563-e4ee0208e5a5.png"><br>
   -CI/CD with cloudbuild.yaml<br>
+  Google cloud resources:<br>
+  -Cloud build
   -Pub Sub for event triggers<br>
   -Cloud scheduler for automating function runs to get ikea tweets data<br>
   -BigQuery table to store appended tweets per batch<br>
-  -BigQuery scheduled query to deduplicate table data<br>
   -Docker containers - artifact repository images (Not included in cloudbuild but script is created)<br>
-  -Unit testing using pytest: see below unit test run successful in cloud build<br>
-  <img width="1036" alt="image" src="https://user-images.githubusercontent.com/50378431/166442423-ff39d457-3b7c-4d5f-b563-e4ee0208e5a5.png"><br>
+  Languages/scripts:
+  -Python functions using tweepy library to get ikea tweets and write to big query table<br>
+  -BigQuery scheduled query to deduplicate table data<br>
   </p>
   <h2>3. Sample output in bq</h2>
   <img width="1338" alt="image" src="https://user-images.githubusercontent.com/50378431/166423045-61798236-9c0e-429c-808f-0a70edd143eb.png"<br>
   <h2>4. What more can be done</h2>
   -Streaming pipeline<br>
+  -Great expectations<br>
   -Delta tables for versions/history<br>
   -Airflow for pipeline automation<br>
   -More complex data model using twitter data for deeper insights<br>
