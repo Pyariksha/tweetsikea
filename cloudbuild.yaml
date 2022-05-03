@@ -6,12 +6,6 @@ steps:
   # (pip packages won't be preserved in future steps!)
   args: [-c, 'pip install -r requirements.txt && pytest *_test.py']
 # [END cloudbuild install and build]
-# [START cloudbuild pytest]
-# Run unit tests
-- name: python
-  entrypoint: python
-  args: ['-m',"pytest", "--junitxml=${SHORT_SHA}_test_log.xml"] 
-# [END cloudbuild pytest]
 # [START cloudbuild push]
 # Docker push to Google Artifact Registry
 - name: 'gcr.io/cloud-builders/docker'
