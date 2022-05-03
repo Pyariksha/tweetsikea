@@ -16,7 +16,7 @@ steps:
   args: ['functions', 'deploy', 'get_tweets_ikea', '--trigger-topic', 'ikea', '--runtime', 'python39', '--entry-point', 'get_tweets_ikea']
 # [END cloudbuild deploy]
 # Store images in Google Artifact Registry 
-images:
-- 'gcr.io/sigma-scheduler-348710/latest'
-- 'gcr.io/sigma-scheduler-348710/$COMMIT_SHA'
+#images:
+#- 'gcr.io/sigma-scheduler-348710/new'
+#- 'gcr.io/sigma-scheduler-348710/$COMMIT_SHA'
 # [END cloudbuild_python_yaml]
