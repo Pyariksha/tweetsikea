@@ -28,7 +28,7 @@ tweets = client.search_recent_tweets(query=query, tweet_fields=['created_at'], m
 def get_tweets_ikea(tweets):
     '''
     This function gets the tweets we want from '#ikea' and saves the 3 required attributes to a pandas dataframe.
-    Input params: data and context - default for cloud functions triggered by gcs. param is request for http.
+    Input params: tweets - data from twitter search
     '''
     try:
       list = []                       #initialize empty list
@@ -37,7 +37,7 @@ def get_tweets_ikea(tweets):
       df = pd.DataFrame(list)         #create dataframe from list
       df = df.drop_duplicates()       #drop duplicate tweets in dataframe -- good for batcch loads
       bq_load('ikea_table_data', df)  #write to bigquery table
-      #no need for a return statement as the function output is a load run to BigQueary (runs the bq_load function)
+      #only need return statement for unit test as the function output is a load run to BigQueary (runs the bq_load function)
       return df
     except:
         raise Exception('Error in function get_tweets_ikea.') #exception handling to seperate config/run failures from function code errors
