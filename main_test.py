@@ -2,6 +2,8 @@ import pytest
 import tweepy
 import main
 from main import get_tweets_ikea, bq_load
+from pandas.io import 
+import pandas_gbq
 
 class TestMain:
     def test_get_tweets(self):
