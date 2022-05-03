@@ -1,6 +1,6 @@
 # tweetsikea<br>
 <h2>This repo contains the files used to create a GCP pipeline to get ikea tweets and store in BQ table for end user data scientists to use.</h2><br>
-Comtents:<br>
+Contents:<br>
 1. main.py -- contains python script<br>
 2. requirements.txt -- contains import requirements<br>
 3. main_test.py -- contains pytest unit test run in CI<br>
@@ -8,7 +8,7 @@ Comtents:<br>
 5. Keynote presentation for this project - contains flow and basic output snips<br>
 6. This README.md outlining the project<br>
 <h2>The flow of the batch process pipeline is as follows:</h2>
-<img width="967" alt="image" src="https://user-images.githubusercontent.com/50378431/166337664-3f5a031e-d2b8-40a6-b1d9-a2112504f04b.png"><br>
+<img width="996" alt="image" src="https://user-images.githubusercontent.com/50378431/166420420-42d6a971-c321-4251-9496-3b98706a208b.png"><br>
 <p><h2>This project uses the following:</h2>
   -Python functions using tweepy library to get ikea tweets and write to big query table<br>
   -Version control with GitHub<br>
