@@ -8,9 +8,9 @@ steps:
 # [END cloudbuild install and build]
 # [START cloudbuild pytest]
 # Run unit tests
-- name: python
-  entrypoint: python
-  args: ["-m", "pytest", "--junitxml=${SHORT_SHA}_test_log.xml"] 
+- name: pytest
+  entrypoint: pytest
+  args: ["pytest", "--junitxml=${SHORT_SHA}_test_log.xml"] 
 # [END cloudbuild pytest]
 # [START cloudbuild push]
 # Docker push to Google Artifact Registry
