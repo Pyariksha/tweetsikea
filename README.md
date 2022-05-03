@@ -7,6 +7,8 @@ Contents:<br>
 4. cloudbuild.yaml -- contains config steps for cloudbuild (1. build, 2. deploy)<br>
 5. Keynote presentation for this project - contains flow and basic output snips<br>
 6. This README.md outlining the project<br>
+7. Extra file containing bq sql DDL query - EL(T)<br>
+8. Draft extra flow for proposed stream via databricks<br>
 <h2>The flow of the batch process pipeline is as follows:</h2>
 <img width="996" alt="image" src="https://user-images.githubusercontent.com/50378431/166420420-42d6a971-c321-4251-9496-3b98706a208b.png"><br>
 <p><h2>This project uses the following:</h2>
@@ -19,10 +21,8 @@ Contents:<br>
   -BigQuery scheduled query to deduplicate table data<br>
   -Docker containers for builds in cloud build - artifact repository stores images<br>
   -Unit testing using pytest<br>
-  -Extra file containing bq sql DDL query - EL(T)<br>
-  -Extra flow for proposed stream via databricks<br>
   </p>
-  <h3>Sample output in bq:</h3><br>
+  <h3>Sample output in bq:</h3>
   <img width="1338" alt="image" src="https://user-images.githubusercontent.com/50378431/166423045-61798236-9c0e-429c-808f-0a70edd143eb.png"
   <h3>What more can be done:</h3>
   -Streaming pipeline<br>
