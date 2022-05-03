@@ -30,16 +30,16 @@ def get_tweets_ikea(tweets):
     This function gets the tweets we want from '#ikea' and saves the 3 required attributes to a pandas dataframe.
     Input params: data and context - default for cloud functions triggered by gcs. param is request for http.
     '''
-    try:
-        list = []                       #initialize empty list
-        for tweet in tweets.data:
-            list.append(tweet)          #append each tweet to list
-        df = pd.DataFrame(list)         #create dataframe from list
-        df = df.drop_duplicates()       #drop duplicate tweets in dataframe -- good for batcch loads
-        bq_load('ikea_table_data', df)  #write to bigquery table
-        #no need for a return statement as the function output is a load run to BigQueary (runs the bq_load function)
-        return df
-    except:
-        raise Exception('Error in function get_tweets_ikea.') #exception handling to seperate config/run failures from function code errors
+    #try:
+    list = []                       #initialize empty list
+    for tweet in tweets.data:
+        list.append(tweet)          #append each tweet to list
+    df = pd.DataFrame(list)         #create dataframe from list
+    df = df.drop_duplicates()       #drop duplicate tweets in dataframe -- good for batcch loads
+    bq_load('ikea_table_data', df)  #write to bigquery table
+    #no need for a return statement as the function output is a load run to BigQueary (runs the bq_load function)
+    return df
+    #except:
+        #raise Exception('Error in function get_tweets_ikea.') #exception handling to seperate config/run failures from function code errors
         
 get_tweets_ikea(tweets) #calls the function as every time gcp runs the function the bq table must update with appended tweets.
