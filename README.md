@@ -7,7 +7,7 @@ Contents:<br>
 4. cloudbuild.yaml -- contains config steps for cloudbuild (1. build, 2. deploy)<br>
 5. Keynote presentation for this project - contains flow and basic output snips<br>
 6. This README.md outlining the project<br>
-7. Presentations (keynote file and pdf version)
+7. Presentations (keynote file and pdf version)<br>
 8. Extra file containing bq sql DDL query - EL(T)<br>
 9. Draft extra flow for proposed stream<br>
 <h2>The flow of the batch process pipeline is as follows:</h2>
@@ -25,7 +25,7 @@ Contents:<br>
   </p>
   <h3>Sample output in bq:</h3>
   <img width="1338" alt="image" src="https://user-images.githubusercontent.com/50378431/166423045-61798236-9c0e-429c-808f-0a70edd143eb.png"
-  <h3>What more can be done:</h3>
+  <h3>What more can be done:</h3><br>
   -Streaming pipeline<br>
   -Delta tables for versions/history<br>
   -Airflow for pipeline automation<br>
