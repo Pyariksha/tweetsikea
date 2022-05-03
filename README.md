@@ -19,7 +19,11 @@ Contents:<br>
   -BigQuery scheduled query to deduplicate table data<br>
   -Docker containers for builds in cloud build - artifact repository stores images<br>
   -Unit testing using pytest<br>
+  -Extra file containing bq sql DDL query - EL(T)<br>
+  -Extra flow for proposed stream via databricks<br>
   </p>
+  <h3>Sample output in bq:</h3><br>
+  <img width="1338" alt="image" src="https://user-images.githubusercontent.com/50378431/166423045-61798236-9c0e-429c-808f-0a70edd143eb.png"
   <h3>What more can be done:</h3>
   -Streaming pipeline<br>
   -Delta tables for versions/history<br>
