@@ -4,7 +4,7 @@ steps:
   entrypoint: /bin/sh
   # Run pip install and pytest in the same build step
   # (pip packages won't be preserved in future steps!)
-  args: [-c, 'pip install -r requirements.txt && pytest functions/**/*_test.py']
+  args: [-c, 'pip install -r requirements.txt && pytest *_test.py']
 # [END cloudbuild install and build]
 # [START cloudbuild pytest]
 # Run unit tests
