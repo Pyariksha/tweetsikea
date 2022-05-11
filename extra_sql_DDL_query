@@ -1,15 +1,15 @@
-CREATE OR REPLACE TABLE `sigma-scheduler-348710.ikea.ikea_table_data` as
-(SELECT 
+CREATE OR REPLACE TABLE `sigma-scheduler-348710.ikea.ikea_table_data_new` as
+(SELECT * FROM (SELECT 
   id,
   text,
   created_at,
   ROW_NUMBER() 
   OVER (
         PARTITION BY 
-        text
+        id
         ORDER BY 
-        id,
         created_at,
+        id,
         text
         ) row_num
-FROM `sigma-scheduler-348710.ikea.ikea_table_data` WHERE row_num = 1)
+FROM `sigma-scheduler-348710.ikea.ikea_table_data`) WHERE row_num = 1)
