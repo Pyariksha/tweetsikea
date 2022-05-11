@@ -13,7 +13,6 @@
 2. The SE principles, languages and cloud tools this project uses<br>
 3. Sample output in bq<br>
 4. What more can be done<br>
-5. Extra draft stream flow<br>
 <h2>1. The flow of the batch process pipeline</h2>
 <img width="996" alt="image" src="https://user-images.githubusercontent.com/50378431/166420420-42d6a971-c321-4251-9496-3b98706a208b.png"><br>
 <p><h2>2. The SE principles, languages and cloud tools this project uses</h2>
@@ -40,4 +39,3 @@
   -Delta tables for versions/history<br>
   -Airflow for pipeline automation<br>
   -More complex data model using twitter data for deeper insights<br>
-  <h2>5. Extra draft stream flow</h2>
