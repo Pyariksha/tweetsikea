@@ -8,7 +8,6 @@
 6. This README.md outlining the project<br>
 7. Presentations (keynote file and pdf version) - contains flow and basic output snips<br>
 8. Extra file containing bq sql DDL query - EL(T)<br>
-9. Draft extra flow diagram for proposed stream<br>
 <h3>Contents:</h3><br>
 1. The flow of the batch process pipeline<br>
 2. The SE principles, languages and cloud tools this project uses<br>
